@@ -51,7 +51,8 @@ module.exports = function(eleventyConfig) {
     htmlTemplateEngine: "liquid",
     templateFormats: [
       "md",
-      "html"
+      "html",
+      "liquid"
     ],
     ignores: ["README.md"],
   };
