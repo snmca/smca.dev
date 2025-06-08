@@ -80,8 +80,13 @@ The code that we used to make this work is based on the
 owned by CfAR, so I can't share the details.
 
 Much of my time was spent testing and integrating the communications subsystem
-in a prototype satellite affectionately referred to as
-[FlatSat](https://www.orcasat.ca/updates/flatsat-v1).
+in a prototype satellite housed in a clean-room in the universities engineering
+lab wing, affectionately referred to as
+[FlatSat](https://www.orcasat.ca/updates/flatsat-v1). I spent a lot of time
+in that room, you can watch myself and others performing some of that testing
+in this video:
+
+<iframe width="804" height="452" src="https://www.youtube.com/embed/_z7ZrC2Zlbw" title="ORCASat FlatSat v1 Demo (August 2021)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 I learned a lot during my time working on this project; it was my first
 large-scale engineering project undertaken in earnest. I'm very glad not to have
