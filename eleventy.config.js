@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("createdOn", date.createdOn);
 
   // Passthroughs
+  eleventyConfig.addPassthroughCopy("robots.txt");
   eleventyConfig.addPassthroughCopy({"static/" : "static/"})
   eleventyConfig.addPassthroughCopy({
     "node_modules/highlight.js/styles/github-dark-dimmed.css": "static/styles/github-dark-dimmed.css"
