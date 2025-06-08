@@ -39,14 +39,22 @@ function lastModified(filePath) {
     minute: "2-digit",
     timeZoneName: "short"
   });
-  const stats = fs.statSync(filePath);
-  const parts = formatter.formatToParts(stats.mtime);
-  const tzAbbr = parts.find(p => p.type === "timeZoneName").value;
+  let date;
+  try {
+    const gitDate = execSync(`git log -1 --format=%aI -- "${filePath}"`, {
+      encoding: "utf-8"
+    }).trim();
+    date = new Date(gitDate);
+  } catch (e) {
+    date = fs.statSync(filePath).mtime;
+  }
+  const parts = formatter.formatToParts(date);
+  const tzAbbr = parts.find(p => p.type === "timeZoneName")?.value || "";
   const gmtOffset = {
     PST: "-8",
     PDT: "-7"
   }[tzAbbr] || "";
-  const formatted = formatter.format(stats.mtime);
+  const formatted = formatter.format(date);
   return `${formatted} (GMT${gmtOffset})`;
 }
 
