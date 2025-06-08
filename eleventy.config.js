@@ -47,7 +47,7 @@ module.exports = function(eleventyConfig) {
       data: "../_data",
       output: "_site"
     },
-    markdownTemplateEngine: "liquid", // Enables {{ content }} in HTML layout
+    markdownTemplateEngine: "liquid",
     htmlTemplateEngine: "liquid",
     templateFormats: [
       "md",

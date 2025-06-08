@@ -106,7 +106,7 @@ me point you to a small collection of some plugins I find indispensable.
 
 If you want to have the experience of a full IDE, it's fairly easy to get. You
 just keep installing plugins. I'm not sure how this would compare to someone
-who is genuinley relies on their IDE-specific features (perhaps XCode users
+who is genuinely relies on their IDE-specific features (perhaps XCode users
 should stay away), as opposed to casually editing Python in Pycharm because
 it's a free-ish Python editor with plenty of polish). But it get's you much of
 the way there.
