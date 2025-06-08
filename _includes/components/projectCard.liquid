@@ -1,0 +1,11 @@
+<a class="project-card" href="{{ project.url }}">
+  <div class="card-thumbnail">
+    <img src="{{ project.data.thumbnail }}" alt="{{ project.title }} thumbnail" loading="lazy">
+  </div>
+  <div class="card-body">
+    <h1 class="card-title">{{ project.data.title }}</h1>
+    <small class="card-date">{{ project.date | formatDate }}</small>
+    <p class="card-description">{{ project.data.brief}}</p>
+  </div>
+</a>
+

@@ -1,0 +1,16 @@
+---
+layout: templates/base.liquid
+title: Projects
+---
+
+<div class="projects-grid">
+  {%- for project in collections.projects reversed -%}
+    {% include "components/card.liquid",
+      url: project.url,
+      title: project.data.title,
+      date: project.date | date: "%Y-%m-%d",
+      description: project.data.description,
+      thumbnail: project.data.thumbnail %}
+  {%- endfor -%}
+</div>
+

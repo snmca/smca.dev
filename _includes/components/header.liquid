@@ -1,0 +1,37 @@
+<header>
+	<div class="header header-inner">
+		<a class="logo-name" href="/">
+			<div>
+        <span>Sean M<sup>c</sup>Auliffe</span>
+			</div>
+		</a>
+		<nav class="main-nav">
+      {% include 'components/navLink', url: "/about", text: "/about" %}
+      {% include 'components/navLink', url: "/blog", text: "/blog" %}
+      {% include 'components/navLink', url: "/projects", text: "/projects" %}
+      {% include 'components/navLink', url: "/misc", text: "/misc" %}
+      {% include 'components/navLink', url: "/resume", text: "/resume" %}
+		</nav>
+		<nav class="icon-nav">
+      <a href="#" id="theme-toggle" class="icon-link" role="button"
+        aria-label="Toggle Theme" title="Toggle Theme (Light / Dark)"
+        onclick="event.preventDefault();">
+        <img src="/static/images/mode.svg" alt="Toggle Theme"
+          title="Switch color theme" class="icon-image"/>
+      </a>
+			<a href="mailto:sean@smca.dev" target="_blank" rel="noopener noreferrer"
+				class="icon-link" title="Email">
+				<img src="/static/images/footer-mail.svg" alt="Twitter" class="icon-image"/>
+			</a>
+			<a href="https://github.com/snmca" target="_blank" rel="noopener noreferrer"
+				class="icon-link" title="GitHub">
+				<img src="/static/images/github.svg" alt="GitHub" class="icon-image"/>
+			</a>
+			<a
+				href="https://linkedin.com/in/seantristanmcauliffe/" target="_blank"
+				rel="noopener noreferrer" class="icon-link" title="LinkedIn">
+				<img src="/static/images/linkedin.svg" alt="LinkedIn" class="icon-image"/>
+			</a>
+		</nav>
+	</div>
+</header>

@@ -1,0 +1,15 @@
+---
+layout: templates/base.liquid
+headIncludes:
+  - github-dark-dimmed.liquid
+  - katex.liquid
+---
+
+<article>
+  <h1 class="no-margin">{{ title }}</h1>
+  {% include 'components/created.liquid' %}
+  {{ content }}
+</article>
+<div class="blog-pager">
+  <a href="/blog">↵ All posts</a>
+</div>

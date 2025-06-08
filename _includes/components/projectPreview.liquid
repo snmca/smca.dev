@@ -1,0 +1,22 @@
+<a class="project-preview"
+   href="{{ post.url}}"
+   style="
+   ">
+  <div class="project-container">
+    <div class="thumbnail-div">
+      <img class="thumbnail"
+           src="{{ post.data.thumbnail }}"
+           alt="{{ post.data.title }} thumbnail">
+    </div>
+    <div class="info">
+      <p class="project-title">{{ post.data.title }}</p>
+      <span class="project-date">
+        {{ post.date | formatDate }}
+      </span>
+      <hr class="project-separator">
+      <p class="brief">{{ post.data.brief }}</p>
+    </div>
+  </div>
+</a>
+
+

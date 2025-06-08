@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Sean McAuliffe" />
+  <meta
+    name="description"
+    content="Sean McAuliffe's personal website and blog;
+      including topics such as embedded programming, entreupreneurship,
+      productivity, the joy of coding, life in Vancouver Canada, and other
+      hobbies."
+  />
+  <meta
+    name="keywords"
+    content="Sean McAuliffe, portfolio, blog, software engineer, projects,
+      portfolio, coding, indieweb"
+  />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{{ title | default: "smca.dev" }}</title>
+  <link rel="icon" href="/static/favicon.png" type="image/x-icon"/>
+  <link rel="canonical" href="{{ site.siteURL }}{{ page.url }}"/>
+  <script src="/static/scripts/theme-toggle.js" defer></script>
+  <link rel="stylesheet" href="/static/styles/bundle.css">
+  {%- if headIncludes %}
+    {% for include in headIncludes %}
+      {% include include %}
+    {% endfor %}
+  {%- endif %}
+</head>
+<body>
+	{% include 'components/header' %}
+  <main>
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+	{% include 'components/footer' %}
+ </body>
+</html>
