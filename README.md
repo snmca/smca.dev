@@ -14,9 +14,11 @@ serve files from this location. For 404 errors redirect to `_site/404.html`.
 The following aliases have been defined:
 
 ```bash
-    npm run build  # npx @11ty/eleventy
-    npm run start  # npx @11ty/eleventy --serve
-    npm run clean  # rm -rf _site/*
+    gen:modified:   # node utils/genLastModified.js
+    build:          # npx @11ty/eleventy
+    make:           # npm run gen:modified && npx @11ty/eleventy
+    start:          # npm run gen:modified && npx @11ty/eleventy --serve
+    clean:          # rm -r _site/*
 ```
 
 `npm run start` starts a development server at `localhost:8080`. Updating files
@@ -26,3 +28,9 @@ a watcher for that file has been added to `eleventy.config.js`:
 ```javascript
 eleventyConfig.addWatchTarget("static/styles/bundle.css")
 ```
+
+Because of the way that this site is deployed, accurate last-modified-on timestamps
+for the input files are not always accessible. So, to provide a last-modified
+time in the rendered output for each file, the script at `utils/genLastModified.js`
+should be run before committing changes which update site content. This populates
+`_data/lastModified.json` which is then used during the build process.
