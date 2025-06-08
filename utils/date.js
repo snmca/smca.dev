@@ -28,8 +28,14 @@ function formatLong(date) {
   return `${formatted} (GMT-8)`;
 }
 
-
-function lastModified(filePath) {
+function lastModified(input) {
+  if (!input) {
+    throw new Error("lastModified: No date provided.");
+  }
+  const date = new Date(input);
+  if (isNaN(date)) {
+    throw new Error(`lastModified: Invalid date input "${dateInput}"`);
+  }
   formatter = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Los_Angeles",
     year: "numeric",
@@ -39,15 +45,6 @@ function lastModified(filePath) {
     minute: "2-digit",
     timeZoneName: "short"
   });
-  let date;
-  try {
-    const gitDate = execSync(`git log -1 --format=%aI -- "${filePath}"`, {
-      encoding: "utf-8"
-    }).trim();
-    date = new Date(gitDate);
-  } catch (e) {
-    date = fs.statSync(filePath).mtime;
-  }
   const parts = formatter.formatToParts(date);
   const tzAbbr = parts.find(p => p.type === "timeZoneName")?.value || "";
   const gmtOffset = {

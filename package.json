@@ -4,9 +4,11 @@
   "description": "Blog",
   "main": "index.js",
   "scripts": {
+    "gen:modified": "node utils/genLastModified.js",
     "build": "npx @11ty/eleventy",
-    "start": "npx @11ty/eleventy --serve",
-    "clean": "rm _site/*"
+    "make": "npm run gen:modified && npx @11ty/eleventy",
+    "start": "npm run gen:modified && npx @11ty/eleventy --serve",
+    "clean": "rm -r _site/*"
   },
   "repository": {
     "type": "git",

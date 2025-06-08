@@ -1,7 +1,8 @@
+{% assign path = page.inputPath | replace: "./", "" %}
 <details class="dropdown">
   <summary><span class="date">Published: {{ page.date | formatDate }}</span></summary>
   <div class="dropdown-content">
-    <span class="date">Last updated: {{ page.inputPath | lastModified }}</span>
+    <span class="date">Last updated: {{ lastModified[path] | lastModified }}</span>
   </div>
 </details>
 
