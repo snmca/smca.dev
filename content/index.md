@@ -11,7 +11,7 @@ website is self-hosted and largely handmade (can you tell?). To contribute to
 the kind of internet I'd like to see more of, I maintain this website. It is
 principally a blog, but it also contains notes, projects descriptions, and links
 to things which I find useful or interesting. You can find much of this under
-[Miscellanea](https://seanmcauliffe.ca/miscellanea.html).
+[Miscellanea](/misc).
 
 If you are interested in exploring the margins of the internet,
 [Marginalia Search](https://search.marginalia.nu/) is a search engine which
