@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SeanMcAuliffe/smca.dev.git"
+    "url": "git+https://github.com/snmca/smca.dev.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SeanMcAuliffe/smca.dev/issues"
+    "url": "https://github.com/snmca/smca.dev/issues"
   },
-  "homepage": "https://github.com/SeanMcAuliffe/smca.dev#readme",
+  "homepage": "https://github.com/snmca/smca.dev#readme",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-plugin-webc": "^0.11.2",

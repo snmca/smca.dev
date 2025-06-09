@@ -17,7 +17,7 @@ layout: templates/base.liquid
 ## Software Developer {.no-margin}
 
 Vancouver, B.C.  
-E-mail: [sean@smca.dev](mailto:sean@seanmcauliffe.ca)  
+E-mail: [sean@smca.dev](mailto:sean@smca.dev)  
 LinkedIn: [linkedin.com/in/seantristanmcauliffe](https://www.linkedin.com/in/seantristanmcauliffe/)  
 GitHub: [github.com/snmca](https://github.com/snmca)
 
