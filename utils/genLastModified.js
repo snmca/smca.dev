@@ -37,7 +37,9 @@ for (const file of allFiles) {
   const gitTime = getGitModified(file);
   if (gitTime) {
     modifiedTimes[relativePath] = gitTime;
-  }
+  } else {
+    modifiedTimes[relativePath] = fs.statSync(file).mtime;
+	}
 }
 
 fs.mkdirSync(path.dirname(outputFile), { recursive: true });
