@@ -19,6 +19,8 @@
   <title>{{ title | default: "smca.dev" }}</title>
   <link rel="icon" href="/static/favicon.png" type="image/x-icon">
   <link rel="canonical" href="https://{{ site.siteURL }}{{ page.url }}">
+  <script defer data-domain="smca.dev" src="https://plausible.io/js/script.outbound-links.js"></script>
+  <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
   <script src="/static/scripts/theme-toggle.js" defer></script>
   <link rel="stylesheet" href="/static/styles/bundle.css">
   {%- if headIncludes %}
