@@ -33,7 +33,7 @@ Do people still send emails? Please email me to let me know.
 {% include 'components/postPreview.liquid', post: post %}
 {% endfor %}
 
-[See all posts ⟶ ](/blog)
+[See all posts »](/blog)
 
 # Projects {.no-bottom-margin}
 
@@ -41,4 +41,4 @@ Do people still send emails? Please email me to let me know.
 {% include 'components/projectPreview.liquid', post: project%}
 {% endfor %}
 
-[See all projects ⟶ ](/projects)
+[See all projects »](/projects)

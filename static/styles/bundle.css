@@ -648,17 +648,32 @@ tr:last-child td {
   padding: 0;
 }
 .archive-item {
-  margin: 0.25em 0.25em 0 0;
-  flex-grow: 1;
+  margin: 2em 0.5em 0 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   justify-content: space-between;
+}
+.archive-entry {
+  gap: 0.5rem;
+  flex: 1;
+}
+.archive-more {
+  margin-top: 1em;
 }
 .archive-date {
   margin-right: 1em;
+}
+.archive-brief {
+  margin: 0;
+  padding-left: 0.125rem;
 }
 .archive-link {
   margin-right: 1em;
   text-decoration: none;
   color: var(--accent);
+  font-weight: bold;
+  flex-shrink: 0;
 }
 
 /* ---------------------------- Footnotes ---------------------------- */
