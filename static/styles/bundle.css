@@ -356,7 +356,7 @@ code:not(.hljs) {
   white-space: nowrap;
 }
 [data-theme="dark"] code:not(.hljs) {
-  background: #2b2b2b;
+  background: var(--accent-bg);
   color: var(--orange);
 }
 pre {
