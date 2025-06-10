@@ -39,7 +39,7 @@ module.exports = function(eleventyConfig) {
 
   // Short Codes
   eleventyConfig.addShortcode("tweet", code.tweet);
- 
+
   return {
     dir: {
       input: "content",

@@ -1,0 +1,17 @@
+.header-anchor {
+  text-decoration: none;
+  margin-left: 0.3em;
+  opacity: 0;
+  font-size: 0.8em;
+  font-size: 20px;
+}
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor {
+  opacity: 1;
+  background-color: transparent;
+  color: var(--accent);
+  transition: ease-in-out 0.2s;
+}
+
+

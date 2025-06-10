@@ -25,7 +25,7 @@ layout: templates/base.liquid
             I attended the <a href="https://uvic.ca">University of Victoria</a>,
             where I studied <del>Mechanical</del> Software Engineering, with a
             somewhat discordant focus on both embedded systems and on artificial
-            intelligence. I graduated with a Bachelors of Software Engineering.
+            intelligence. I graduated with a Bachelor’s of Software Engineering.
         </p>
         <p>
             I've always been interested in how software can be integrated into

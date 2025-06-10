@@ -57,7 +57,7 @@ been around long enough) ancestors weren't wrong.
 
 This website and all of its posts are written entirely in Vim. Pg's writing
 setup has inspired me to take all of my writing from Obsidian, Google Drive,
-Microsoft Word (🤢) to Vim [1].
+Microsoft Word (🤢) to Vim.[^1]
 
 {% tweet "1617833154680848384" %}
 
@@ -140,4 +140,4 @@ man!
 author and long time maintainer of Vim passed away recently, in August 2023. May
 he be remembered for a thousand years.
 
-[1] [https://www.paulgraham.com/pfaq.html](https://www.paulgraham.com/pfaq.html)
+[^1]: [https://www.paulgraham.com/pfaq.html](https://www.paulgraham.com/pfaq.html)

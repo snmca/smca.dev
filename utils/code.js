@@ -3,6 +3,7 @@ const markdownIt = require("markdown-it");
 const markdownItAttrs = require("markdown-it-attrs");
 const markdownItFootnotes = require("markdown-it-footnote");
 const markdownItKatex = require("markdown-it-katex");
+const markdownItAnchor = require("markdown-it-anchor");
 
 function highlight() {
   return markdownIt({
@@ -12,8 +13,7 @@ function highlight() {
         try {
           const highlighted = hljs.highlight(str, { language: lang, ignoreIllegals: true }).value;
           return `<pre><code class="hljs language-${lang}">${highlighted}</code></pre>`;
-        } catch (err) {
-        }
+        } catch (err) {}
       }
       const escaped = markdownIt().utils.escapeHtml(str);
       return `<pre><code class="hljs">${escaped}</code></pre>`;
@@ -21,11 +21,27 @@ function highlight() {
   })
   .use(markdownItAttrs)
   .use(markdownItFootnotes)
-  .use(markdownItKatex);
+  .use(markdownItKatex)
+  .use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.linkInsideHeader({
+      placement: 'after',
+      class: 'header-anchor',
+      symbol: "🔗",
+      //symbol: "§",
+      //symbol: "»",
+      //symbol: "#",
+      //symbol: "¶",
+      //symbol: "»",
+      space: false,
+      ariaHidden: true
+    }),
+    slugify: s =>
+    s.trim().toLowerCase().replace(/[\s]+/g, '-').replace(/[^\w-]/g, '')
+  });
 }
 
 function tweet(id) {
-   return `
+  return `
     <div class="tweet">
       <blockquote class="twitter-tweet">
         <a href="https://twitter.com/i/status/${id}"></a>
