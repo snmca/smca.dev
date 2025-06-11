@@ -26,21 +26,21 @@ CubeSatellite designed and built by students at the University of Victoria's
 
 The satellite was launched aboard SpaceX
 [CRS-26](https://en.wikipedia.org/wiki/SpaceX_CRS-26) on November 26th from
-Kennedy Space Center. It rendezvoused and docked with the Internation Space
+Kennedy Space Center. It rendezvoused and docked with the International Space
 Station on November 27th. That mission delivered ORCASat as cargo to the ISS,
 where it was stowed aboard until it was
 [deployed](https://www.orcasat.ca/updates/deployment) into low Earth orbit on
 December 29th, 2022.
 
 ORCASat remained in orbit performing it's [mission](https://www.orcasat.ca/mission)
-until atmosperic drag degraded it's orbit; and it completed atmospheric re-entry
+until atmospheric drag degraded it's orbit; and it completed atmospheric re-entry
 on July 7th, 2023 having spent 195 days in space and completing 2990 orbits of
 the Earth.
 
 The purpose of the satellite was to serve as a reference light source of known
-luminosty above the majority of Earth's atmosphere. The idea is that ground-based
+luminosity above the majority of Earth's atmosphere. The idea is that ground-based
 telescopes can make an observation of the reference source provided by ORCASat
-before making an observation of an astronomical body of interest. The]
+before making an observation of an astronomical body of interest. The
 astronomers can then use the apparent brightness of ORCASat - observed at a
 known distance - to calibrate out the effect of attenuation due to the atmosphere.
 
@@ -63,7 +63,7 @@ The telemetry would later be sent to astronomers at the partner observatory, and
 they could work their magic - using our data to help them better interpret their
 results.
 
-I played a small part in ORCASats design and construction. I worked on the
+I played a small part in ORCASat’s design and construction. I worked on the
 project as an undergraduate volunteer part time in between my studies, and
 later as a co-op student from May - December, 2021. The project
 [team](https://www.orcasat.ca/team) was large and full of many talented people.
