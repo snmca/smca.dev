@@ -12,6 +12,7 @@ h3:hover .header-anchor {
   background-color: transparent;
   color: var(--accent);
   transition: ease-in-out 0.2s;
+  cursor: pointer;
 }
 
 
