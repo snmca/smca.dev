@@ -23,7 +23,9 @@ layout: templates/base.liquid
     <div class="archive-entry">
         <a class="archive-link" href="{{ post.url }}">{{ post.data.title }}</a>
         <p class="archive-brief">{{ post.data.brief }}</p>
-        <a class="archive-more" href="{{ post.url }}">Read more »</a>
+        <p class="archive-more">
+            <a href="{{ post.url }}">Read more »</a>
+        </p>
     </div>
   </li>
 {% endfor %}

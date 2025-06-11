@@ -680,14 +680,14 @@ tr:last-child td {
   flex: 1;
 }
 .archive-more {
-  margin-top: 1em;
+  margin: 0.5em 0 0 0;
 }
 .archive-date {
   display: block;
   width: 10em;
 }
 .archive-brief {
-  margin: 0;
+  margin: 0.5em 0 0 0;
 }
 .archive-link {
   margin-right: 1em;
