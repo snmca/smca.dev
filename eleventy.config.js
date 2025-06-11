@@ -23,6 +23,9 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("formatLong", date.formatLong);
   eleventyConfig.addFilter("lastModified", date.lastModified);
   eleventyConfig.addFilter("createdOn", date.createdOn);
+  eleventyConfig.addFilter("wordCount", text =>
+    text.split(/\s+/).filter(Boolean).length
+  );
 
   // Passthroughs
   eleventyConfig.addPassthroughCopy({ "content/robots.txt": "robots.txt" });

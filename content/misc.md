@@ -11,6 +11,7 @@ There are some endpoints which I may not have linked to anyplace else:
 * [To do list](/todo)
 * [Reading list](/reading)
 * [/now page](/now)
+* [/uses page](/uses)
 
 ---
 

@@ -327,6 +327,18 @@ blockquote {
   text-decoration: none;
   background-color: transparent;
 }
+.filtered-svg {
+  filter: var(--icon-filter-normal);
+}
+.filtered-svg:hover {
+  filter: var(--icon-accent-filter);
+}
+[data-theme="dark"] .filtered-svg {
+  filter: var(--icon-filter-inverted)
+}
+[data-theme="dark"] .filtered-svg:hover {
+  filter: var(--icon-accent-filter);
+}
 .icon-image {
   width: 26px;
   height: 26px;
@@ -671,8 +683,8 @@ tr:last-child td {
   margin-top: 1em;
 }
 .archive-date {
-	display: block;
-	width: 10em;
+  display: block;
+  width: 10em;
 }
 .archive-brief {
   margin: 0;
