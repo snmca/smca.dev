@@ -21,8 +21,17 @@
   <link rel="canonical" href="https://{{ site.siteURL }}{{ page.url }}">
   <script defer data-domain="smca.dev" src="https://plausible.io/js/script.outbound-links.js"></script>
   <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-  <script src="/static/scripts/theme-toggle.js" defer></script>
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      const theme = (saved === 'light' || saved === 'dark')
+        ? saved
+        : 'dark';
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
   <link rel="stylesheet" href="/static/styles/bundle.css">
+  <script src="/static/scripts/theme-toggle.js" defer></script>
   {%- if headIncludes %}
     {% for include in headIncludes %}
       {% include include %}
@@ -30,12 +39,12 @@
   {%- endif %}
 </head>
 <body>
-	{% include 'components/header' %}
+  {% include 'components/header' %}
   <main>
     <div class="container">
       {{ content }}
     </div>
   </main>
-	{% include 'components/footer' %}
+  {% include 'components/footer' %}
  </body>
 </html>
