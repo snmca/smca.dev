@@ -1,9 +1,19 @@
-const hljs = require("highlight.js");
-const markdownIt = require("markdown-it");
-const markdownItAttrs = require("markdown-it-attrs");
+const path                = require("node:path");
+const hljs                = require("highlight.js");
+const markdownIt          = require("markdown-it");
+const markdownItAttrs     = require("markdown-it-attrs");
 const markdownItFootnotes = require("markdown-it-footnote");
-const markdownItKatex = require("markdown-it-katex");
-const markdownItAnchor = require("markdown-it-anchor");
+const markdownItKatex     = require("markdown-it-katex");
+const markdownItAnchor    = require("markdown-it-anchor");
+
+const ENABLE_ANCHORS_RE = /\/(?:blog|projects|daily)\//;
+
+const basePermalink = markdownItAnchor.permalink.linkInsideHeader({
+  symbol: "",
+  placement: "before",
+  ariaHidden: true,
+  class: "header-anchor",
+});
 
 function highlight() {
   return markdownIt({
@@ -23,18 +33,15 @@ function highlight() {
   .use(markdownItFootnotes)
   .use(markdownItKatex)
   .use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.linkInsideHeader({
-      placement: 'after',
-      class: 'header-anchor',
-      symbol: "🔗",
-      //symbol: "§",
-      //symbol: "»",
-      //symbol: "#",
-      //symbol: "¶",
-      //symbol: "»",
-      space: false,
-      ariaHidden: true
-    }),
+    permalink: (slug, opts, state, idx) => {
+      const file = (state.env.page?.inputPath ?? "");
+      const unixPath = path.posix.normalize(file);
+      if (ENABLE_ANCHORS_RE.test(unixPath)) {
+        basePermalink(slug, opts, state, idx);
+      } else {
+        // Do not render anchors
+      }
+    },
     slugify: s =>
     s.trim().toLowerCase().replace(/[\s]+/g, '-').replace(/[^\w-]/g, '')
   });

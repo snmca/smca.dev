@@ -4,6 +4,10 @@ layout: "templates/base.liquid"
 ---
 
 # Reading List {.no-margin}
+
+To see what I've been reading on the internet lately see [my daily links](/daily)
+or [my blogroll](/misc#blogs-i-visit).
+
 <div>{% include 'components/modified.liquid' %}</div>
 
 ## To Read {.no-bottom-margin}

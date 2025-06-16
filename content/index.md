@@ -6,24 +6,19 @@ layout: templates/base.liquid
 
 ---
 
-I'm too young to remember the early internet, but I've heard good things. This
-website is self-hosted and largely handmade (can you tell?). To contribute to
-the kind of internet I'd like to see more of, I maintain this website. It is
-principally a blog, but it also contains notes, projects descriptions, and links
-to things which I find useful or interesting. You can find much of this under
-[Miscellanea](/misc).
-
-If you are interested in exploring the margins of the internet,
-[Marginalia Search](https://search.marginalia.nu/) is a search engine which
-is designed with the goal of improving the discoverability of blogs and other
-parts of the independent web.
-
 I'm interested in many topics these days. If you see anything here you find
 interesting please reach out to me. I love getting email, à la
 [Patrick McKenzie](https://www.kalzumeus.com/standing-invitation/).
 Consider this a standing invitation.
 
 Do people still send emails? Please email me to let me know.
+
+You can see semi-formal writings, as well as my own notes and knowledge base
+on my [blog](/blog). I maintain a list of [daily links](/daily) for tracking
+things on the internet I find interesting. Write-ups for completed projects
+can be found under [projects](/projects). You can read about me personally
+on my [about](/about) or [now](/now) pages. For a more comprehensive list
+of information on this site see [Miscellanea](/misc) or the [SiteMap](/sitemap)
 
 ---
 

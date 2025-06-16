@@ -17,6 +17,11 @@ module.exports = function(eleventyConfig) {
       return !item.inputPath.endsWith("index.md");
     });
   });
+  eleventyConfig.addCollection("daily", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("content/daily/*.md").filter(item => {
+      return !item.inputPath.endsWith("index.md");
+    });
+  });
 
   // Filters
   eleventyConfig.addFilter("formatDate", date.format);

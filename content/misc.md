@@ -12,6 +12,8 @@ There are some endpoints which I may not have linked to anyplace else:
 * [Reading list](/reading)
 * [/now page](/now)
 * [/uses page](/uses)
+* [Human-readable SiteMap](/sitemap)
+* [My daily links](/daily)
 
 ---
 
@@ -21,7 +23,6 @@ There are some endpoints which I may not have linked to anyplace else:
 * [The Grug Brained Developer](https://grugbrain.dev/)
 * [A Smart Bear](https://longform.asmartbear.com/)
 * [Astral Codex Ten](https://www.astralcodexten.com/)
-* [James’ Coffee Blog](https://jamesg.blog)
 * [Ben Congdon’s Blog](https://benjamincongdon.me/)
 * [Andrew Conner’s blog](https://andrewconner.com/)
 * [Julia Evan’s Blog](https://jvns.ca/)

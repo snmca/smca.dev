@@ -6,8 +6,12 @@ headIncludes:
   - anchor.liquid
 ---
 
-<article>
-  <h1 class="no-margin">{{ title }}</h1>
+<article class="blog-post">
+  {% assign slug = title | slug %}
+  <h1 id="{{ slug }}" class="no-margin">
+    <a class="header-anchor" href="#{{ slug }}" aria-hidden="true" tabindex="-1"></a>
+    {{ title }}
+  </h1>
   {% include 'components/created.liquid' %}
   {{ content }}
 </article>

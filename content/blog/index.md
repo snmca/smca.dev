@@ -2,7 +2,15 @@
 layout: templates/base.liquid
 ---
 
-# Blog {.no-margin}  
+# Blog {.no-margin}
+
+My blog posts range from semi-formal writings to notes for future reference.
+Sometimes I like to jot down ideas or bits of knowledge as I discover them,
+so that I can easily refer back to them in the future, or potentially help
+save others some time.
+
+For very quick notes on things I've found interesting on the internet see
+[my daily links](/daily).
 
 {% assign last_year = '' %}
 {% for post in collections.blog reversed %}

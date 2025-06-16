@@ -101,7 +101,7 @@ a:hover {
 a::selection {
   color: var(--link-selection-fg);
 }
-/* External link indicator */
+ /*External link indicator */
 /*a[href^="http"]:not([href*="smca.dev"]):not(.icon-link)::after {*/
   /*content: "";*/
   /*display: inline-block;*/
@@ -128,7 +128,9 @@ li,
 a {
   font-family: "Recursive", sans-serif;
   line-height: 1.5em;
-}
+  font-weight: 400;
+  font-style: normal;
+ }
 ul {
   margin-top: 1em;
   padding-left: 20px;
@@ -145,28 +147,44 @@ del::selection {
 }
 
 /* ---------------------------- Headings ---------------------------- */
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2, h3, h4, h5, h6 {
   font-family: "SignikaBold" !important;
   margin: 20px 0 20px 0;
+  position: relative;
 }
+h1 { padding-left: 1.6ch; }
 h1::before {
-  content: "# ";
+  content: "#";
   font-family: "SignikaBold";
   color: var(--accent);
 }
+h2 { padding-left: 3ch; }
 h2::before {
-  content: "## ";
+  content: "##";
   font-family: "SignikaBold";
   color: var(--accent);
 }
+h3 { padding-left: 4.4ch; }
 h3::before {
-  content: "### ";
+  content: "###";
   font-family: "SignikaBold";
   color: var(--accent);
+}
+h4 { padding-left: 6ch; }
+h4::before {
+  content: "####";
+  font-family: "SignikaBold";
+  color: var(--accent);
+}
+h1::before,
+h2::before,
+h3::before,
+h4::before,
+h5::before,
+h6::before {
+  position: absolute;
+  left: 0;
+  transition: color 100ms ease;
 }
 .no-top-margin {
   margin-top: 0 !important;
@@ -179,10 +197,20 @@ h3::before {
   margin-bottom: 0;
 }
 .header-anchor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.5em;
+  height: 100%;
   opacity: 0;
-  font-size: 0;
   cursor: auto;
+  text-decoration: none;
+  margin: 0 !important;
 }
+h1 .header-anchor { width: 1.6ch; }
+h2 .header-anchor { width: 3ch; }
+h3 .header-anchor { width: 4.4ch; }
+h4 .header-anchor { width: 6ch; }
 
 /* ---------------------------- Body Layout ---------------------------- */
 .container {
@@ -216,12 +244,13 @@ header {
   }
   .main-nav {
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
+    margin: 1em 0;
   }
   .icon-nav {
-    align-self: flex-end;
+    align-self: normal;
     gap: 12px;
   }
   .logo-name {
@@ -444,7 +473,17 @@ pre::-webkit-scrollbar-track {
 }
 
 /* ---------------------------- Profile Pic ---------------------------- */
-.profile-pic-wrapper {
+.bio-layout {
+  max-width: 100%;
+  display: grid;
+  grid:
+    "sidebar body" 1fr
+    / minmax(215px, 32%) 1fr;
+  gap: 6px;
+}
+.bio-sidebar {
+  grid-area: sidebar;
+  align-self: center;
   position: relative;
   width: 200px;
   height: 200px;
@@ -456,22 +495,25 @@ pre::-webkit-scrollbar-track {
   border: 1px solid var(--dark-line);
   background: rgb(183, 183, 183);
   float: left;
-  margin: 35px 20px 10px 0;
   box-shadow: 5px 5px 5px var(--accent-bg);
+  margin-left: 1em;
 }
-.bio-card::after {
-  content: "";
-  display: table;
-  clear: both;
+.bio-body {
+  grid-area: body;
+  padding-right: 1em;
 }
-@media (max-width: 500px) {
-  .profile-pic-wrapper {
-    float: none;
-    margin: 0 auto 16px auto;
+@media (max-width:640px) {
+  .bio-layout{
+    grid:
+      "sidebar"
+      "body"
+      / 1fr;
+    justify-items:center;
   }
-}
-.pfp-wrapper {
-  margin-top: 0.25em;
+  .bio-sidebar {
+    justify-self:center;
+    margin-bottom:1rem;
+  }
 }
 .pfp-stack {
   position: relative;
@@ -480,7 +522,7 @@ pre::-webkit-scrollbar-track {
 }
 .pfp-stack img {
   position: absolute;
-  width: 155%;
+  width: 148%;
   height: 143%;
   object-position: 80%;
   object-fit: contain;
@@ -821,4 +863,14 @@ tr:last-child td {
     font-weight: 600;
     font-style: normal;
     font-display: swap;
+}
+@font-face {
+    font-family: 'DejaVu';
+    src: url('/static/fonts/DejaVuSansMono.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+.blog-post {
+  max-width: 750px;
 }

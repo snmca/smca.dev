@@ -1,18 +1,11 @@
-.header-anchor {
-  text-decoration: none;
-  margin-left: 0.3em;
-  opacity: 0;
-  font-size: 0.8em;
-  font-size: 20px;
-}
-h1:hover .header-anchor,
-h2:hover .header-anchor,
-h3:hover .header-anchor {
-  opacity: 1;
-  background-color: transparent;
-  color: var(--accent);
-  transition: ease-in-out 0.2s;
-  cursor: pointer;
+h1:hover::before, h1:focus-within::before,
+h2:hover::before, h2:focus-within::before,
+h3:hover::before, h3:focus-within::before,
+h4:hover::before, h4:focus-within::before,
+h5:hover::before, h5:focus-within::before,
+h6:hover::before, h6:focus-within::before {
+  color: var(--before);
+  text-decoration: underline;
 }
 
 
