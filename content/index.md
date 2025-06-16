@@ -13,12 +13,12 @@ Consider this a standing invitation.
 
 Do people still send emails? Please email me to let me know.
 
-You can see semi-formal writings, as well as my own notes and knowledge base
-on my [blog](/blog). I maintain a list of [daily links](/daily) for tracking
-things on the internet I find interesting. Write-ups for completed projects
-can be found under [projects](/projects). You can read about me personally
-on my [about](/about) or [now](/now) pages. For a more comprehensive list
-of information on this site see [Miscellanea](/misc) or the [SiteMap](/sitemap)
+You can see semi-formal writings, as well as my own notes on my [blog](/blog).
+I maintain a list of [daily links](/daily) for tracking things on the internet
+I find interesting. Write-ups for completed projects can be found under
+[projects](/projects). You can read about me personally on my [about](/about)
+or [now](/now) pages. For a list of other information on this site see
+[Miscellanea](/misc) or the [SiteMap](/sitemap)
 
 ---
 
@@ -29,6 +29,15 @@ of information on this site see [Miscellanea](/misc) or the [SiteMap](/sitemap)
 {% endfor %}
 
 [See all posts »](/blog)
+
+# Daily Links {.no-bottom-margin}
+
+{% for post in collections.daily reversed limit:2 %}
+{% include 'components/dailyLinks.liquid', post: post %}
+{% endfor %}
+
+[See more entries »](/daily)
+
 
 # Projects {.no-bottom-margin}
 
